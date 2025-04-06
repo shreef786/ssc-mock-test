@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grammar Checker</title>
+  <link rel="stylesheet" href="../styles/style.css"/>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #004080;
+    }
+    .text-box {
+      width: 100%;
+      height: 200px;
+      font-size: 1.1rem;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .submit-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>व्याकरण जाँच | Grammar Checker</h2>
+    <p><strong>नीचे दिए गए वाक्य को ध्यानपूर्वक पढ़ें और टाइप करें:</strong></p>
+    <p>आज का मौसम बहुत सुहावना है और पक्षी चहचहा रहे हैं।</p>
+    <textarea class="text-box" placeholder="यहाँ टाइप करें..."></textarea>
+    <button class="submit-btn" onclick="window.location.href='grammar-result.html'">Submit</button>
+  </div>
+</body>
+</html>

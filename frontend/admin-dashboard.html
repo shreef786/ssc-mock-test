@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../styles/style.css"/>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      color: #004080;
+      text-align: center;
+    }
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .dashboard-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .dashboard-card:hover {
+      background-color: #d9eaff;
+    }
+    .dashboard-card h3 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <div class="dashboard-grid">
+    <div class="dashboard-card" onclick="location.href='/admin/upload-mocktest.html'">
+      <h3>Upload Mock Test</h3>
+    </div>
+    <div class="dashboard-card" onclick="location.href='/admin/set-time-section.html'">
+      <h3>Set Time & Sections</h3>
+    </div>
+    <div class="dashboard-card" onclick="location.href='/admin/upload-editorial.html'">
+      <h3>Upload Editorial</h3>
+    </div>
+    <div class="dashboard-card" onclick="location.href='/admin/upload-vocabulary.html'">
+      <h3>Upload Vocabulary</h3>
+    </div>
+    <div class="dashboard-card" onclick="location.href='/admin/upload-typing-text.html'">
+      <h3>Upload Typing Test Text</h3>
+    </div>
+    <div class="dashboard-card" onclick="location.href='/admin/logout'">
+      <h3>Logout</h3>
+    </div>
+  </div>
+</body>
+</html>

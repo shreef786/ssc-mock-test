@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Result</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #004080;
+    }
+    .summary {
+      margin-bottom: 30px;
+    }
+    .summary p {
+      font-size: 18px;
+    }
+    .question {
+      margin-bottom: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+    .question p {
+      margin: 5px 0;
+    }
+    .correct {
+      color: green;
+    }
+    .wrong {
+      color: red;
+    }
+    .solution {
+      background: #eaf4ff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Test Result | परीक्षण परिणाम</h2>
+    <div class="summary">
+      <p><strong>Total Questions:</strong> 10</p>
+      <p><strong>Correct Answers:</strong> 6</p>
+      <p><strong>Wrong Answers:</strong> 2</p>
+      <p><strong>Unattempted:</strong> 2</p>
+      <p><strong>Total Marks:</strong> 60</p>
+    </div>
+
+    <div class="question">
+      <p><strong>Q1:</strong> What is the capital of India?</p>
+      <p class="correct">Your Answer: Delhi (Correct)</p>
+      <div class="solution">
+        <strong>Explanation:</strong> Delhi is the capital of India.
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>Q2:</strong> Which is the largest planet?</p>
+      <p class="wrong">Your Answer: Earth (Wrong)</p>
+      <div class="solution">
+        <strong>Explanation:</strong> Jupiter is the largest planet in the solar system.
+      </div>
+    </div>
+
+    <!-- More questions will be listed similarly -->
+
+  </div>
+</body>
+</html>

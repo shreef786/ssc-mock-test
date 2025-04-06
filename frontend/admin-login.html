@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="../styles/style.css"/>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin Panel Login</h2>
+    <form action="/admin/dashboard" method="POST">
+      <label for="adminId">Admin ID</label>
+      <input type="text" id="adminId" name="adminId" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mock Test Interface</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .top-bar {
+      background-color: #004080;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .question-panel {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+    .question-box, .palette {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .question {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .options label {
+      display: block;
+      margin: 8px 0;
+    }
+    .nav-buttons {
+      margin-top: 20px;
+    }
+    .nav-buttons button {
+      margin-right: 10px;
+      padding: 8px 12px;
+      background: #004080;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .palette div {
+      margin-bottom: 10px;
+    }
+    .status-circle {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin: 3px;
+      text-align: center;
+      line-height: 25px;
+      color: white;
+    }
+    .answered { background-color: green; }
+    .not-answered { background-color: red; }
+    .review { background-color: orange; }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <h2>Mock Test | मॉक टेस्ट</h2>
+  </div>
+
+  <div class="question-panel">
+    <div class="question-box">
+      <div class="question">
+        Q1: What is the capital of India? / भारत की राजधानी क्या है?
+      </div>
+      <div class="options">
+        <label><input type="radio" name="q1" /> A. Mumbai</label>
+        <label><input type="radio" name="q1" /> B. Delhi</label>
+        <label><input type="radio" name="q1" /> C. Kolkata</label>
+        <label><input type="radio" name="q1" /> D. Chennai</label>
+      </div>
+      <div class="nav-buttons">
+        <button>Previous</button>
+        <button>Save & Next</button>
+        <button>Mark for Review</button>
+        <button>Clear Response</button>
+      </div>
+    </div>
+
+    <div class="palette">
+      <h3>Question Palette</h3>
+      <div>
+        <span class="status-circle answered">1</span>
+        <span class="status-circle not-answered">2</span>
+        <span class="status-circle review">3</span>
+        <span class="status-circle">4</span>
+      </div>
+      <button style="margin-top: 10px;">Submit</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Typing Test</title>
+  <link rel="stylesheet" href="../styles/style.css"/>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      color: #003366;
+      text-align: center;
+    }
+    form {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #004080;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0059b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload Typing Test Text</h2>
+  <form id="typingUploadForm">
+    <label for="typingText">Typing Text (English):</label>
+    <textarea id="typingText" name="typingText" rows="10" required></textarea>
+
+    <button type="submit">Upload Typing Text</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Mock Test</title>
+  <link rel="stylesheet" href="../styles/style.css"/>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      color: #003366;
+      text-align: center;
+    }
+    form {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #004080;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0059b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload Mock Test Question</h2>
+  <form id="mockTestForm">
+    <label for="examName">Exam Name:</label>
+    <input type="text" id="examName" name="examName" required/>
+
+    <label for="paperName">Paper Name:</label>
+    <input type="text" id="paperName" name="paperName" required/>
+
+    <label for="section">Subject / Section:</label>
+    <input type="text" id="section" name="section" required/>
+
+    <label for="question">Question:</label>
+    <textarea id="question" name="question" rows="3" required></textarea>
+
+    <label for="optionA">Option A:</label>
+    <input type="text" id="optionA" name="optionA" required/>
+
+    <label for="optionB">Option B:</label>
+    <input type="text" id="optionB" name="optionB" required/>
+
+    <label for="optionC">Option C:</label>
+    <input type="text" id="optionC" name="optionC" required/>
+
+    <label for="optionD">Option D:</label>
+    <input type="text" id="optionD" name="optionD" required/>
+
+    <label for="correctAnswer">Correct Answer (A/B/C/D):</label>
+    <select id="correctAnswer" name="correctAnswer" required>
+      <option value="">Select Correct Option</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
+
+    <label for="explanation">Explanation:</label>
+    <textarea id="explanation" name="explanation" rows="3" required></textarea>
+
+    <button type="submit">Upload Question</button>
+  </form>
+</body>
+</html>
