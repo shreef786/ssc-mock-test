@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Vocabulary</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Daily Vocabulary</h2>
+    <form id="vocabForm">
+      <label for="vocabDate">Date:</label>
+      <input type="date" id="vocabDate" required />
+
+      <label for="vocabWords">Vocabulary Words (one per line):</label>
+      <textarea id="vocabWords" rows="10" required></textarea>
+
+      <button type="submit">Upload Vocabulary</button>
+    </form>
+    <p id="vocabStatus"></p>
+  </div>
+  <script src="../../scripts/uploadVocabulary.js"></script>
+</body>
+</html>

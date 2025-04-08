@@ -1,16 +1,12 @@
-import express from 'express';
-import { createTest, getAllTests, getTestById } from '../controllers/testController.js';
-import { authMiddleware, adminMiddleware } from '../middleware/authMiddleware.js';
-
+// backend/routes/testRoutes.js
+const express = require("express");
 const router = express.Router();
+const { addMockTest, getMockTests } = require("../controllers/testController");
 
-// Create a New Mock Test (Admin Only)
-router.post('/create', authMiddleware, adminMiddleware, createTest);
+// Upload a new mock test
+router.post("/upload", addMockTest);
 
-// Get All Available Mock Tests
-router.get('/all', getAllTests);
+// Get all mock tests
+router.get("/all", getMockTests);
 
-// Get Test Details by ID
-router.get('/:id', getTestById);
-
-export default router;
+module.exports = router;

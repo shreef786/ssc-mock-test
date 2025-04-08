@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Editorial</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Daily Editorial</h2>
+    <form id="editorialForm">
+      <label for="editorialDate">Date:</label>
+      <input type="date" id="editorialDate" required />
+
+      <label for="editorialContent">Editorial Content:</label>
+      <textarea id="editorialContent" rows="10" required></textarea>
+
+      <button type="submit">Upload Editorial</button>
+    </form>
+    <p id="editorialStatus"></p>
+  </div>
+  <script src="../../scripts/uploadEditorial.js"></script>
+</body>
+</html>

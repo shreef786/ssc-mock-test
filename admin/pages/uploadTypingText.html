@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Typing Text</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Typing Test Text</h2>
+    <form id="typingTextForm">
+      <label for="typingDate">Date:</label>
+      <input type="date" id="typingDate" required />
+
+      <label for="typingText">Typing Test Text (English):</label>
+      <textarea id="typingText" rows="10" required></textarea>
+
+      <button type="submit">Upload Text</button>
+    </form>
+    <p id="typingStatus"></p>
+  </div>
+  <script src="../../scripts/uploadTypingText.js"></script>
+</body>
+</html>

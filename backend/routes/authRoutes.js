@@ -1,16 +1,23 @@
-import express from 'express';
-import { registerUser, loginUser, getUserProfile } from '../controllers/authController.js';
-import { authMiddleware } from '../middleware/authMiddleware.js';
-
+// backend/routes/authRoutes.js
+const express = require("express");
 const router = express.Router();
+const admin = require("firebase-admin");
 
-// User Registration Route
-router.post('/register', registerUser);
+admin.initializeApp({
+  credential: admin.credential.applicationDefault(),
+});
 
-// User Login Route
-router.post('/login', loginUser);
+router.post("/login", async (req, res) => {
+  const { adminId, password } = req.body;
 
-// Get User Profile (Protected Route)
-router.get('/profile', authMiddleware, getUserProfile);
+  const expectedAdminId = "admin123";
+  const expectedPassword = "securepass123";
 
-export default router;
+  if (adminId === expectedAdminId && password === expectedPassword) {
+    res.status(200).json({ success: true, message: "Login successful" });
+  } else {
+    res.status(401).json({ success: false, message: "Invalid credentials" });
+  }
+});
+
+module.exports = router;

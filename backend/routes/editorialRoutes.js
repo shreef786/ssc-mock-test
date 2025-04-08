@@ -1,31 +1,35 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const db = require("../config/firebase");
+const Editorial = require('../models/Editorial');
 
-// ✅ API to Upload Daily Editorial
-router.post("/add", async (req, res) => {
+// Upload new editorial
+router.post('/upload', async (req, res) => {
   try {
-    const { title, content } = req.body;
-    if (!title || !content) {
-      return res.status(400).json({ message: "Title and Content are required" });
-    }
-
-    await db.collection("editorials").add({ title, content, date: new Date() });
-
-    res.status(201).json({ message: "Editorial added successfully" });
+    const editorial = new Editorial(req.body);
+    await editorial.save();
+    res.status(201).json({ message: 'Editorial uploaded successfully' });
   } catch (error) {
-    res.status(500).json({ message: "Error adding editorial", error });
+    res.status(500).json({ error: 'Failed to upload editorial' });
   }
 });
 
-// ✅ API to Fetch Daily Editorials
-router.get("/list", async (req, res) => {
+// Get latest editorial
+router.get('/latest', async (req, res) => {
   try {
-    const snapshot = await db.collection("editorials").orderBy("date", "desc").limit(10).get();
-    const editorialList = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-    res.status(200).json(editorialList);
+    const latest = await Editorial.findOne().sort({ date: -1 });
+    res.status(200).json(latest);
   } catch (error) {
-    res.status(500).json({ message: "Error fetching editorials", error });
+    res.status(500).json({ error: 'Failed to fetch latest editorial' });
+  }
+});
+
+// Get last 7 editorials
+router.get('/previous', async (req, res) => {
+  try {
+    const previous = await Editorial.find().sort({ date: -1 }).limit(7);
+    res.status(200).json(previous);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch previous editorials' });
   }
 });
 
